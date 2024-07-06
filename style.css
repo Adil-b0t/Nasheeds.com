@@ -1,0 +1,491 @@
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Teko:wght@300..700&display=swap');
+*{
+    margin: 0;padding: 0;
+    font-family: "PT Sans", sans-serif;
+
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(#000000 30%,  rgb(12, 42, 66));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+
+.main{
+    height: 100%;
+}
+.nav{
+  padding: 1vw 3vw;
+  text-align: start;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5vw;
+background-image:linear-gradient(to bottom, rgb(20, 16, 40) 40%,black);  
+}
+ h1{
+    font-size: 9vw;
+    line-height: 7vw;
+    color: rgb(237, 231, 231);
+    margin:1vw 1vw;
+    font-weight: 600;
+
+}
+.fa-angles-right{
+    color:white;
+    font-size:4vw;
+    }
+    .fa-angles-right:hover{
+        transform: scale(1.1);
+        }
+.features{
+    display: flex;
+    align-items: center;
+    gap: 3vw;
+}
+#shuffleButton{
+    font-size: 1.5vw;
+    padding: 0.7vw;
+    border: none;
+    border-radius: 40px;
+    font-weight: bold;
+    opacity: 0.8;
+}
+#shuffleButton:hover{
+   transform: scale(1);
+   cursor: pointer;
+   opacity: 1;
+}
+.box {
+    --clr-shadow__border: #d9a1ff;
+    --clr-text: #F6F4EB;
+    --clr-space: #120e1e;
+    --clr-space-gr: #271950;
+    --clr-star: #E9F8F9;
+    --size: 3rem;
+    position: relative;
+    outline: 1px solid var(--clr-shadow__border);
+  }
+  
+  .button {
+    font-weight: 600;
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+    background: transparent;
+    padding: calc(var(--size) / 3) var(--size);
+    border: none;
+    cursor: pointer;
+    color: var(--clr-text);
+    text-shadow: 2px 0px var(--clr-shadow__border), 0px 2px var(--clr-shadow__border),
+    -2px 0px var(--clr-shadow__border), 0px -2px var(--clr-shadow__border);
+  }
+  
+  .space {
+    width: 100%;
+    height: 100%;
+    bottom: 0%;
+    gap: 1.5rem;
+    transition: 0.5s ease-in-out;
+    z-index: -1;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    display: flex;
+    background: linear-gradient( 160deg, var(--clr-space), var(--clr-space-gr));
+  }
+  
+  .box:hover .space {
+    opacity: 1;
+  }
+  
+  .star {
+    height: 4rem;
+    width: 0.3rem;
+    transition: 0.5s;
+    border-radius: 50px;
+    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+    position: relative;
+    background-color: var(--clr-star);
+    animation: space-animation calc(0.1s * var(--i)) linear infinite;
+  }
+  
+@keyframes space-animation {
+    0% {
+      transform: rotate(-30deg) translateY(calc(-52% * var(--i)));
+    }
+  
+    100% {
+      transform: rotate(-30deg) translateY(calc(52% * var(--i)));
+    }
+  }  
+hr{
+border:0.1px solid rgb(20, 16, 40) ;
+}
+.container{
+    height: 100%;
+   padding: 5vw;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-evenly;
+   gap: 2vw;
+   margin-top: -2vw;
+}
+.useless{
+    display: none;
+}
+.songitems{
+    background-color: rgb(20, 16, 40);
+    display: flex;
+    flex-direction: column;
+   padding: 1.5vw 0vw ;
+    align-items: center; 
+    width: 20vw;
+    border-radius: 50px;
+    justify-content: space-between;
+    height: 26vw;                                                                                                                             
+    color: white;
+    font-family: 'Teko',"PT Sans";
+   text-align: center;
+}
+.songitems img{
+   width: 18vw;
+   height: 15vw;
+   border-radius: 50px;
+}
+.songitems h5{
+    font-weight: 200;
+    font-size: 2vw;
+    font-family: Teko,arial;
+}
+.songitems i{
+    display: flex;
+    justify-content: space-evenly;
+    color: white;
+    font-size: 2vw;
+}
+.songitems i:hover{
+    color:grey;
+    transform: scale(1.1);
+    
+}
+
+.bottom{
+    height: 11vw;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1vw;
+    padding-bottom: 2vw;
+}
+
+.progressBar{
+    width: 80%;
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    height: 2vw; /* Specified height */
+    background: #0d0831; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+    border-radius: 50px;
+}
+/* Mouse-over effects */
+.progressBar:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+  }
+  
+  /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+  .progressBar::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 2vw; /* Set a specific slider handle width */
+    height: 2vw; /* Slider handle height */
+    background: #ffffff; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+    border-radius: 50px;
+  }
+  
+.playarea{
+    color: rgb(255, 255, 255);
+    display: flex;
+    gap: 6vw;
+}
+.playarea i{
+    font-size: 3vw;
+    cursor: pointer;
+}
+.playarea i:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+.bottom p{
+    color:white;
+    font-size:2vw ;
+    font-weight: 300;
+    text-align: start;
+}
+.footer{
+    height: 20vw;
+    width: 100%;
+}
+.creditscontainer{
+    width: 100%;
+    height: 50vw;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-image: url("lightning.jpg");
+    background-size: cover;
+    font-family: teko;
+}
+.credits{
+    height: 30vw;
+    width: 40vw;
+    background-color: rgba(0, 0, 0, 0.827);
+    padding: 0vw 2vw;
+    text-align: center;
+    font-family: teko;
+}
+.credits i{
+    color:white;
+    font-size:2vw;
+    font-weight: bold;
+    animation-name:clickme ;
+    animation-duration: 2s;
+    animation-delay: 5s;
+    animation-iteration-count: infinite;
+}
+@keyframes clickme {
+    from{
+        color: white;
+    }
+    to{
+       color: chocolate;
+       transform: scale(2);
+    }
+}
+.credits h1{
+ font-size: 2vw;
+ font-weight:500;
+ margin: 0;
+ padding: 0;
+ font-family: teko;
+}
+#containerh1{
+    font-weight: 100;
+     font-size: 3vw;
+     margin: 0;
+     padding: 0;
+     font-family: teko;
+}
+.credits p{
+    font-size: 2vw;
+    font-weight: 100;
+   font-style: italic;
+   color: white;
+   margin: 0;
+   font-family: teko;
+   padding: 0;
+}
+#firstline{
+    display: flex;  align-items: center; gap: 9vw;
+    margin: 0;
+    padding: 0;
+}
+#adil{
+  display: flex;
+  justify-content:end;
+  align-items: end;
+  margin: 0;
+  padding: 0;
+  text-align: end;
+}
+.credits i:hover{
+    opacity: 0.7;
+    transform: scale(1.1);
+}
+@media  (max-width:1500px) {
+    body{
+        display: block;
+        background-image: url("mobileback.webp");
+        background-size: contain;
+
+    }
+    .nav{
+        padding: 4vw 4vw;
+        height: 10%;
+    }
+    .nav h1{
+        text-shadow:0px 0px ;
+    }
+    .nav i{
+        text-shadow:1px 1px black ;
+
+    }
+    .credits i{
+        color:white;
+        font-size:2vw;
+        font-weight: bold;
+        animation-name:clickme ;
+        animation-duration: 2s;
+        animation-delay: 2s;
+        animation-iteration-count: infinite;
+    }
+    @keyframes clickme {
+        from{
+            color: white;
+        }
+        to{
+           color: chocolate;
+           transform: scale(1.5);
+        }
+    }
+    .nav button{
+        font-size: 3.5vw;
+        padding: 1.5vw;
+        background:rgb(255, 255, 255);
+        border-radius: 10px;
+    }
+    .nav button:hover{
+        transform: scale(1.1);
+    }
+    .fa-angles-right{
+        font-size: 8vw;
+    }
+    .container{
+        
+       /* background-color: rgb(15, 16, 27); */
+       padding: 5vw;
+       display: flex;
+       flex-wrap: wrap;
+       justify-content:start;
+       gap: 2vw;
+       overflow: scroll;
+       scroll-behavior: smooth;
+       margin-bottom: 0;
+    }
+    .useless{
+        height: 15vw;
+        display: block;
+        width: 100%;
+    }
+    .songitems{
+    height:25vw;
+    width:80%;
+    margin-bottom:10PX;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding: 0vw 4vw;
+    background-color: rgba(20, 16, 40, 0.707);
+    border-radius: 25px;
+ }
+.songitems img{
+    border-radius: 10px;
+    width: 18vw;
+}
+ .songitems h5{
+    font-size: 4.5vw;
+    font-weight: 400;
+ }
+ .songitems i{
+    font-size: 6vw;
+ }
+  .bottom{
+    margin-top: 12vw;
+    position: fixed;
+    bottom: 0;
+    background-color: black;
+    width: 100%;
+    height: 24vw;
+    z-index: 10001;
+  
+  }
+  .playarea{
+    gap: 50px;
+    margin-top: 8px;
+  }
+  .progressBar{
+    width: 80%;
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    height: 2vw; /* Specified height */
+    background: white; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+    border-radius: 50px;
+}
+/* Mouse-over effects */
+.progressBar:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+  }
+  
+  /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+  .progressBar::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 4vw; /* Set a specific slider handle width */
+    height: 4vw; /* Slider handle height */
+    background:#0d0831; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+    border-radius: 10px;
+  }
+  
+  .bottom p{
+    font-size: 4vw;
+    font-weight: 500;
+  }
+  .bottom i{
+    font-size: 6vw;
+  }
+  .songitems i:hover{
+    color:#1b650e;
+    transform: scale(1.1);
+    
+}
+.creditscontainer{
+    margin-top: 0;
+    height: 65vw;
+    align-items: start;
+    padding-top:6vw;
+    background-image: url("phonecredits.jpg");
+    background-size: contain;
+}
+.credits{
+   background-color: rgba(0, 0, 0, 0.667);
+   width: 45vw;
+   height: 33vw;
+   padding: 2vw;
+}
+.credits i{
+    font-size: 7vw;
+   color: #ffffff;
+ 
+}
+#firstline{
+    gap: 15px;
+}
+.credits h1{
+    font-size: 3.5vw;
+}
+#containerh1{
+    font-size: 4vw;
+}
+.credits p{
+    font-size: 3vw;
+}
+}
