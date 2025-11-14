@@ -25,7 +25,7 @@ masterplay.addEventListener("click", () => {
         sname = document.getElementById(`${songindex}name`)
         song = document.getElementById(`${songindex}`)
         songname.innerHTML = sname.innerText;
-
+                                                                                            
     }
     else {
         audioElement.pause();
@@ -68,7 +68,6 @@ Array.from(document.getElementsByClassName("songitemplay")).forEach((element) =>
             sname = document.getElementById(`${songindex}name`)
             song = document.getElementById(`${songindex}`)
             songname.innerHTML = sname.innerText;
-
         }
         else {
             audioElement.pause()
